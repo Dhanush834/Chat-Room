@@ -21,6 +21,11 @@ const PORT = 3000 || process.env.PORT ;
 const botName = 'Chat Bot';
 let user; 
 
+
+app.get("/healthz", (req,res) => {
+    res.send("OK");
+});
+
 //Run When client connets
 io.on('connection', (socket) =>{
 
